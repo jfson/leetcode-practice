@@ -8,3 +8,6 @@
 * From Easy Difficulty to Medium,Hard
 
 
+### Second time
+
+* Tag : Array、Tree
