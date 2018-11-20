@@ -4,7 +4,7 @@ package com.sun.leetcode.differentkind.tree;
 import com.sun.leetcode.model.TreeNode;
 
 /**
- * Author: sunzhen
+ * Author: jfson sun
  * Create on:  2018/11/6
  * Description:
  */
