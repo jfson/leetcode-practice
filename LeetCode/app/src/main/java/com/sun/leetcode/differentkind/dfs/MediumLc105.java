@@ -1,6 +1,7 @@
-package com.example.lctest.dfs;
+package com.sun.leetcode.differentkind.dfs;
 
-import com.example.lctest.model.TreeNode;
+
+import com.sun.leetcode.model.TreeNode;
 
 /**
  * Author: sunzhen
