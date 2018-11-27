@@ -38,7 +38,7 @@ public class LcMedium455 {
 
 
      题意：每个人一块饼干，每个人想要的饼干重量不一样，有s.length块,要求尽可能满足每个小孩，return 满足的小孩数量
-     solution: sort first.
+     solution: sort first. 遍历满足则enough++
      */
 
     public int findContentChildren(int[] g, int[] s) {
