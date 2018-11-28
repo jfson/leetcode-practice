@@ -1,5 +1,6 @@
 package com.sun.leetcode.differentkind.greed;
 
+import android.annotation.TargetApi;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 
@@ -42,7 +43,7 @@ public class LcMedium767 {
      优先队列：PriorityQueue是基于优先堆的一个无界队列，这个优先队列中的元素可以默认自然排序或者通过提供的Comparator（比较器）在队列实例化的时排序
      */
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
+    @TargetApi(Build.VERSION_CODES.N)
     public String reorganizeString(String S) {
         if (S == null || S.length() == 0) return null;
 
