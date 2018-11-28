@@ -38,6 +38,8 @@ public class LcMedium767 {
 
      题意：重新排列，使相邻的两个字符不相同。不满足则返回null
      solution: 先存起来，根据数量进行排序。然后用队列一次进行压string
+
+     优先队列：PriorityQueue是基于优先堆的一个无界队列，这个优先队列中的元素可以默认自然排序或者通过提供的Comparator（比较器）在队列实例化的时排序
      */
 
     @RequiresApi(api = Build.VERSION_CODES.N)
