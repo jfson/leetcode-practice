@@ -4,7 +4,7 @@ package com.sun.leetcode.differentkind.dfs;
 import com.sun.leetcode.model.TreeNode;
 
 /**
- * Author: sunzhen
+ * Author: jfosn
  * Create on:  2018/11/21
  * Description:
  */
