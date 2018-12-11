@@ -1,5 +1,7 @@
 package com.sun.leetcode.airbnb;
 
+import java.util.Arrays;
+
 /**
  * Author: jfson sun
  * Create on:  2018/12/10
@@ -49,8 +51,20 @@ public class Lc787 {
      */
 
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int K) {
+        int MAX = 0x3f3f3f3f;// 无穷大
 
+        int[] cost = new int[n];
+        Arrays.fill(cost,MAX);
+        cost[src] = 0;
 
-        return 0;
+        for (int i = 0; i <=K ; i++) {
+            int[] cur = cost.clone();
+            for (int[] flight:flights){
+                cur[flight[1]] = Math.min(cur[flight[1]],cost[flight[0]] +flight[2]);
+            }
+            cost= cur;
+        }
+
+        return cost[dst] >= MAX ?-1:cost[dst];
     }
 }
