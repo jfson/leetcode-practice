@@ -1,4 +1,4 @@
-package com.sun.leetcode.airbnb;
+package com.sun.leetcode.company.airbnb;
 
 /**
  * Author: jfson sun

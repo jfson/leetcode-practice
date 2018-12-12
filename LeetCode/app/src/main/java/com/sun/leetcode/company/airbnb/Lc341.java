@@ -1,4 +1,4 @@
-package com.sun.leetcode.airbnb;
+package com.sun.leetcode.company.airbnb;
 
 import java.util.Iterator;
 import java.util.List;
