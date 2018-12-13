@@ -38,7 +38,8 @@ public class Lc460 {
      * cache.get(4);       // returns 4
      * <p>
      * 题意：LRU:频率RU..频率相同的移除最近不使用的元素；跟LRU相比，有一个使用频率
-     * solution: 两个Hash 分别存
+     * solution: 两个HashMap 分别存。。valueHash 用于存储Key查询使用。nodeHash用存储<Key,Node></>于内部操作。 LinkedHashSet用于存储count 不同的每个count下的Node的Key.
+     * O（1）所以用HashTable(HashMap).最后是一个double链表  Node(count = 0)-Node(count = 1)-Node(count = 2)-Node(count = 3)-Node(count = 4)
      */
 
 
@@ -85,7 +86,7 @@ public class Lc460 {
 
         private void addToHead(int key) {
             if (head == null) {
-                head = new Node(key);
+                head = new Node(0);
                 head.keys.add(key);
             } else if (head.count > 0) {
                 Node node =new Node(0);
@@ -117,6 +118,7 @@ public class Lc460 {
                 temp.pre = node;
                 temp.next = node.next;
                 node.next.pre = temp;
+                node.next = temp;
             }
 
             nodeHash.put(key,node.next);
