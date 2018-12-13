@@ -41,14 +41,14 @@ public class Lc146 {
 
     class LRUCache {
         HashMap<Integer, Node> map;
-        int capacity, count;
+        int capicity, count;
         Node start, end;
 
         public LRUCache(int capacity) {
-            this.capacity = capacity;
+            this.capicity = capacity;
             map = new HashMap<>();
-            this.start = new Node(0, 0);
-            this.end = new Node(0, 0);
+            start = new Node(0, 0);
+            end = new Node(0, 0);
             start.next = end;
             end.pre = start;
             start.pre = null;
@@ -80,7 +80,7 @@ public class Lc146 {
         }
 
         public void put(int key, int value) {
-            if (map.get(key) != null) { // has key
+            if (map.get(key) != null) {// has key
                 Node node = map.get(key);
                 node.value = value;
                 deleteNode(node);
@@ -88,11 +88,10 @@ public class Lc146 {
             } else {
                 Node node = new Node(key, value);
                 map.put(key, node);
-                if (count < capacity) {
+                if (count < capicity) {
                     count++;
                     addToHead(node);
-                }
-                {
+                } else {
                     // 由于加了一个end,所以是end.pre
                     map.remove(end.pre.key);
                     deleteNode(end.pre);
