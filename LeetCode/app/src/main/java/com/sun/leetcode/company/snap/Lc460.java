@@ -81,28 +81,7 @@ public class Lc460 {
             increaseCount(key);
         }
 
-        // 新增一个count的Node
-        private void increaseCount(int key){
-            Node node = nodeHash.get(key);
-            node.keys.remove(key);
 
-            if (node.next == null){
-                node.next = new Node(node.count+1);
-                node.next.pre = node;
-                node.next.keys.addAll(node.keys);
-            }else if (node.next.count == node.count+1){
-                node.next.keys.add(key);
-            }else {//node.next.count > node.count+1
-                Node temp = new Node(node.count+1);
-                temp.keys.add(key);
-                temp.pre = node;
-                temp.next = node.next;
-                node.next.pre = temp;
-            }
-
-            nodeHash.put(key,node.next);
-            if (node.keys.size()==0) remove(node);
-        }
 
         private void addToHead(int key) {
             if (head == null) {
@@ -119,6 +98,29 @@ public class Lc460 {
                 head.keys.add(key);
             }
             nodeHash.put(key,head);
+        }
+
+        // 新增一个count的Node
+        private void increaseCount(int key){
+            Node node = nodeHash.get(key);
+            node.keys.remove(key);
+
+            if (node.next == null){
+                node.next = new Node(node.count+1);
+                node.next.pre = node;
+                node.next.keys.add(key);
+            }else if (node.next.count == node.count+1){
+                node.next.keys.add(key);
+            }else {//node.next.count > node.count+1
+                Node temp = new Node(node.count+1);
+                temp.keys.add(key);
+                temp.pre = node;
+                temp.next = node.next;
+                node.next.pre = temp;
+            }
+
+            nodeHash.put(key,node.next);
+            if (node.keys.size()==0) remove(node);
         }
 
         private void removeOld() {
