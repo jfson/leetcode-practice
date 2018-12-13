@@ -35,7 +35,7 @@ public class Lc146 {
      * cache.get(4);       // returns 4
      * cache.get(4);       // returns 4
      * <p>
-     * 题意： LRU
+     * 题意： LRU 最近使用
      * solution: O（1），所以是hash table makes the time of get() to be O(1)，不是List
      */
 
