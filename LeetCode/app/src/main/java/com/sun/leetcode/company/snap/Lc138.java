@@ -44,19 +44,18 @@ public class Lc138 {
 
     public RandomListNode copyRandomList2(RandomListNode head) {
         if (head == null) return null;
-
         HashMap<RandomListNode,RandomListNode> map = new HashMap<>();
-        RandomListNode cur = head;
-        if (cur != null){
-            map.put(cur,new RandomListNode(cur.label));
-            cur = cur.next;
+        RandomListNode node = head;
+        while (node != null){
+            map.put(node,new RandomListNode(node.label));
+            node = node.next;
         }
-        cur = head;
+        node = head;
 
-        while (cur!=null){
-            map.get(cur).next = map.get(cur.next);
-            map.get(cur).random = map.get(cur.random);
-            cur = cur.next;
+        while (node!=null){
+            map.get(node).next = map.get(node.next);
+            map.get(node).random = map.get(node.random);
+            node = node.next;
         }
 
         return map.get(head);
