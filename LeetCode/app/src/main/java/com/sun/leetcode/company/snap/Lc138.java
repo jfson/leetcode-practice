@@ -31,7 +31,7 @@ public class Lc138 {
      2 - new 2
      3 - new 3
      4 - new 4
-     deep copy:
+     deep copy: HashMap 预存。根据key...找出next,random
 
      题意：
      */
