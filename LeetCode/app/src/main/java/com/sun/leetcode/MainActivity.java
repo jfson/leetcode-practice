@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.sun.leetcode.company.Microsoft.Lc794;
 import com.sun.leetcode.differentkind.array.EasyLc717;
 import com.sun.leetcode.differentkind.greed.LcMedium767;
 
@@ -32,5 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
         b ^= 1;
         Log.d("ss","-->" + a);
+
+
+        String[] st = {"OXX","XOX","OXO"};
+        new Lc794().validTicTacToe(st);
     }
 }
