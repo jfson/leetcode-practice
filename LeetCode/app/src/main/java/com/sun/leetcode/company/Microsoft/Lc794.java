@@ -59,7 +59,7 @@ public class Lc794 {
         ////先画'X',oCount must is xCount-1
         if (oCount > xCount && oCount != xCount-1) return false;
         if (win(board,'X') && oCount != xCount-1 ) return false;
-        if (win(board,'O') && oCount != xCount-1 ) return false;
+        if (win(board,'O') && oCount != xCount) return false; //'O' win oCount must is xCount
         return true;
     }
 
