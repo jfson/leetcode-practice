@@ -50,7 +50,9 @@ public class Lc336 {
                 Integer j = map.get(new StringBuilder(s).reverse().toString());
 
                 if (j != null && i != j && isPalindrome(words[i].substring(left==0?right:0,left ==0 ? words[i].length():left))){
-                    result.add(Arrays.asList(left == 0 ? new Integer[]{j,i} :new Integer[]{i,j}));
+                    System.out.print("i:" + i +"-->j:" +j);
+                    System.out.print("left:" +  left +"-->right:" +right);
+                    result.add(Arrays.asList(left == 0 ? new Integer[]{i,j} :new Integer[]{j,i}));
                 }
 
                 if (right < words[i].length()) {

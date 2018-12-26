@@ -13,55 +13,62 @@ import java.util.Set;
  */
 public class Lc269 {
     /**
-     * 269. Alien Dictionary
-     * DescriptionHintsSubmissionsDiscussSolution
-     * There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
-     * <p>
-     * Example 1:
-     * <p>
-     * Input:
-     * [
-     * "wrt",
-     * "wrf",
-     * "er",
-     * "ett",
-     * "rftt"
-     * ]
-     * <p>
-     * Output: "wertf"
-     * Example 2:
-     * <p>
-     * Input:
-     * [
-     * "z",
-     * "x"
-     * ]
-     * <p>
-     * Output: "zx"
-     * Example 3:
-     * <p>
-     * Input:
-     * [
-     * "z",
-     * "x",
-     * "z"
-     * ]
-     * <p>
-     * Output: ""
-     * <p>
-     * Explanation: The order is invalid, so return "".
-     * Note:
-     * <p>
-     * You may assume all letters are in lowercase.
-     * You may assume that if a is a prefix of b, then a must appear before b in the given dictionary.
-     * If the order is invalid, return an empty string.
-     * There may be multiple valid order of letters, return any one of them is fine.
-     * <p>
-     * 题意： 先出现的在前面，最后所有非重复的组成一个单词，按先后顺序
-     * 先后位置不对的情况，返回空（拓扑排序BFS/DFS）优先BFS...
+
+     269. Alien Dictionary
+     DescriptionHintsSubmissionsDiscussSolution
+     There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
+
+     Example 1:
+
+     Input:
+     [
+     "wrt",
+     "wrf",
+     "er",
+     "ett",
+     "rftt"
+     ]
+
+     Output: "wertf"
+     Example 2:
+
+     Input:
+     [
+     "z",
+     "x"
+     ]
+
+     Output: "zx"
+     Example 3:
+
+     Input:
+     [
+     "z",
+     "x",
+     "z"
+     ]
+
+     Output: ""
+
+     Explanation: The order is invalid, so return "".
+     Note:
+
+     You may assume all letters are in lowercase.
+     You may assume that if a is a prefix of b, then a must appear before b in the given dictionary.
+     If the order is invalid, return an empty string.
+     There may be multiple valid order of letters, return any one of them is fine.
+
+     题意：给个字符串数组。每个字符串按字典顺序出现。 先出现的在前面，最后所有非重复的组成一个单词，按先后顺序
+     先后位置不对的情况，返回空（拓扑排序BFS/DFS）优先BFS...
      */
 
     public String alienOrder(String[] words) {
+
+        return "";
+    }
+
+
+    public String alienOrder2(String[] words) {
         if (words == null || words.length == 0) return "";
         StringBuilder res = new StringBuilder();
 
@@ -96,6 +103,7 @@ public class Lc269 {
             }
         }
 
+//        ...
 
         return res.toString();
     }
