@@ -16,7 +16,7 @@
 * Different company
 
 ### All the problem
-[Link: This problem list copy from my google From, u can see more click here](https://docs.google.com/spreadsheets/d/12DJ1cYo1e88Xz5V5uS3iFUgbAVCbOl8dktmCuNI8qVY/edit#gid=0)
+[Link: This problem list copy from my google Form, u can see more click here](https://docs.google.com/spreadsheets/d/12DJ1cYo1e88Xz5V5uS3iFUgbAVCbOl8dktmCuNI8qVY/edit#gid=0)
 
 
 ### Problem
