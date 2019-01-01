@@ -1,4 +1,4 @@
-package com.sun.leetcode.company.airbnb;
+package com.sun.leetcode.company.airb;
 
 import android.annotation.TargetApi;
 import android.os.Build;
