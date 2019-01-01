@@ -40,6 +40,7 @@ public class Lc706 {
      All keys and values will be in the range of [0, 1000000].
      The number of operations will be in the range of [1, 10000].
      Please do not use the built-in HashMap library.
+     solution: 关键点在于。数组key值（Integer.hashCode(key) % nodes.length）。找到Nodes[i]的pre项
      */
 
     /** Initialize your data structure here. */
@@ -85,7 +86,7 @@ public class Lc706 {
             if (nodes[i] == null) return;
 
             ListNode node = find(nodes[i],key);
-            if (node == null) return;
+            if (node.next == null) return;
 
             node.next = node.next.next;
         }
