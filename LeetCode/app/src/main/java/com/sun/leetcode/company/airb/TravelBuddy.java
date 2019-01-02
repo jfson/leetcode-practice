@@ -102,4 +102,20 @@ public class TravelBuddy {
             return that.similarity - this.similarity;
         }
     }
+
+    public static class UnitTest {
+        public void test1() {
+            Set<String> myWishList = new HashSet<>(Arrays.asList(new String[]{"a", "b", "c", "d"}));
+            Set<String> wishList1 = new HashSet<>(Arrays.asList(new String[]{"a", "b", "e", "f"}));
+            Set<String> wishList2 = new HashSet<>(Arrays.asList(new String[]{"a", "c", "d", "g"}));
+            Set<String> wishList3 = new HashSet<>(Arrays.asList(new String[]{"c", "f", "e", "g"}));
+            Map<String, Set<String>> friendWishLists = new HashMap<>();
+            friendWishLists.put("Buddy1", wishList1);
+            friendWishLists.put("Buddy2", wishList2);
+            friendWishLists.put("Buddy3", wishList3);
+            Solution sol = new TravelBuddy().new Solution(myWishList, friendWishLists);
+            List<String> res = sol.recommendCities(10);
+
+        }
+    }
 }
