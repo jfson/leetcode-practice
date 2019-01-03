@@ -1,4 +1,4 @@
-package com.sun.leetcode.company.airb;
+package com.sun.leetcode.company.ab;
 
 import java.util.Iterator;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
  * Description:
  * Train of thought:
  */
-public class ListIterator {
+public class List2DIterator {
     /**
      List of List Iterator(2D List Iterator) 相似问题 Lc251/Lc341
      Given an array of arrays, implement an iterator class to allow the client to traverse and remove elements in the array list.

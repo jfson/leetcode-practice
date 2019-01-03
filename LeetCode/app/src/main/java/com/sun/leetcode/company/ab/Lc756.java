@@ -1,4 +1,4 @@
-package com.sun.leetcode.company.airb;
+package com.sun.leetcode.company.ab;
 
 import android.annotation.TargetApi;
 import android.os.Build;

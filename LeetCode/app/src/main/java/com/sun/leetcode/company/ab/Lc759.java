@@ -1,4 +1,4 @@
-package com.sun.leetcode.company.airb;
+package com.sun.leetcode.company.ab;
 
 import com.sun.leetcode.model.Interval;
 
