@@ -85,7 +85,6 @@ public class CSVParser {
                 }
             }
         }
-
         if (sb.length() > 0) {
             res.add(sb.toString());
         }
