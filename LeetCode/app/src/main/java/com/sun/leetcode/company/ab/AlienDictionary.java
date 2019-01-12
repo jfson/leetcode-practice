@@ -123,10 +123,11 @@ public class AlienDictionary {
             }
         }
 
-
+        // queue: rt
         while (!queue.isEmpty()){
             char c = queue.remove();
             result += c;
+
 
             if (map.containsKey(c)){
                 for (char c2:map.get(c)){
