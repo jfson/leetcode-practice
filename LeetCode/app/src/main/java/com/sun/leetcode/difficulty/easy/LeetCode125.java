@@ -8,6 +8,25 @@ package com.sun.leetcode.difficulty.easy;
  * Train of thought:
  */
 public class LeetCode125 {
+    /**
+     125. Valid Palindrome
+     Easy
+     Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+
+     Note: For the purpose of this problem, we define empty string as valid palindrome.
+
+     Example 1:
+
+     Input: "A man, a plan, a canal: Panama"
+     Output: true
+     Example 2:
+
+     Input: "race a car"
+     Output: false
+
+     题意： 判断一个字符是不是回文。符号或者空格不算
+     思路： 非字符的时候跳过即可
+     */
     public boolean isPalindrome(String s) {
         if (s == null || s.length() == 0) return true;
 
