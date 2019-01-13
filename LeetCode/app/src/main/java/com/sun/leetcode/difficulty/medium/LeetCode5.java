@@ -10,18 +10,23 @@ package com.sun.leetcode.difficulty.medium;
  */
 public class LeetCode5 {
 
-//    Input: "babad"
-//    Output: "bab"
+    /**
+     5. Longest Palindromic Substring
+     Medium
+     Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 
-//    or
-//    Input: "cbbd"
-//    Output: "bb"
+     Example 1:
 
-//    return
-    // aba
-    // abba
+     Input: "babad"
+     Output: "bab"
+     Note: "aba" is also a valid answer.
+     Example 2:
 
-    // use DP or from middle to other side
+     Input: "cbbd"
+     Output: "bb"
+
+     solution: use DP or from middle to other side
+     */
 
     String maxStr = "";
 
