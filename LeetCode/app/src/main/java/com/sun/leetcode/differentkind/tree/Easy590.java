@@ -21,6 +21,15 @@ public class Easy590 {
      题意： n叉树，事后遍历。不用递归，用遍历
      solution: 用 stack 存储child 节点(因为后序遍历，所以遍历)。  用while 轮训child 节点值并存储..
      最后记得翻转list
+     example:
+            1
+        /   \   \
+        3    2   4
+       /\
+      5 6
+
+     return [5,6,3,2,4,1]
+
      */
 
     public List<Integer> postorder(Node root) {
@@ -42,6 +51,4 @@ public class Easy590 {
 
         return ret;
     }
-
-
 }
