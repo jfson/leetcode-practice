@@ -17,7 +17,21 @@ public class Easy700 {
      * <p>
      * 题意：n叉树 搜索一个以val 为跟节点的子树，不存在返回NULL
      * solution: 递归
+     For example,
 
+     Given the tree:
+      4
+     / \
+     2   7
+     / \
+     1   3
+
+     And the value to search: 2
+     You should return this subtree:
+
+     2
+     / \
+     1   3
      二叉查找树（英语：Binary Search Tree），也称为二叉搜索树、有序二叉树（ordered binary tree）或排序二叉树（sorted binary tree），是指一棵空树或者具有下列性质的二叉树：
      若任意节点的左子树不空，则左子树上所有节点的值均小于它的根节点的值；
      若任意节点的右子树不空，则右子树上所有节点的值均大于它的根节点的值；

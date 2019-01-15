@@ -61,6 +61,7 @@ package com.sun.leetcode.company.Microsoft;
  1 <= len(chars) <= 1000.
  */
 public class Lc443 {
+//    注意：多位count从int 转为char
     public int compress(char[] chars) {
         int indexAns = 0,index = 0;
 

@@ -21,6 +21,14 @@ public class Easy589 {
 
      Recursive solution is trivial, could you do it iteratively?
 
+     example:
+                1
+            /   \   \
+           3    2   4
+          /\
+         5 6
+
+     return [1,3,5,6,2,4]
      题意：前序遍历n叉数，不用递归，用遍历
      solution: 用 stack 存储child 节点(因为前序遍历，所以遍历用倒序h)。  用while 轮训child 节点值并存储..
      // stack 压栈add() == push()

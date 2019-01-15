@@ -7,7 +7,8 @@ package com.sun.leetcode.difficulty.easy;
  * Question:    67. Add Binary
  * Description: Given two binary strings, return their sum (also a binary string).
  * The input strings are both non-empty and contains only characters 1 or 0.
- * Train of thought:
+ * Train of thought: 二进制add.
+ * 注意：String中的char变成数字要减去'0'
  */
 public class LeetCode67 {
 //    Input: a = "11", b = "1"
