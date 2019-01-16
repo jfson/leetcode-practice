@@ -18,6 +18,13 @@
 ### All the problem
 [Link: This problem list copy from my google Form, u can see more click here](https://docs.google.com/spreadsheets/d/12DJ1cYo1e88Xz5V5uS3iFUgbAVCbOl8dktmCuNI8qVY/edit#gid=0)
 
+### Problem Numble
+* Easy
+> 1,2,3
+* Medium
+> 1,2,3
+* Hard
+> 1,2,3
 
 ### Problem
 |LeetCode Id |	Question | Difficulty | Data Structures |	Algorithms |	thought |	follow up|
