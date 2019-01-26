@@ -11,6 +11,23 @@ import com.sun.leetcode.model.ListNode;
  * Train of thought:
  */
 public class LeetCode141 {
+    /**
+     141. Linked List Cycle
+     Easy
+
+     1249
+
+     97
+
+     Favorite
+
+     Share
+     Given a linked list, determine if it has a cycle in it.
+
+     To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail connects to. If pos is -1, then there is no cycle in the linked list.
+
+
+     */
     // 判断无环：暴力解法： 最后next = null(无重复的)
 
     // 判断有环： 快慢指针。肯定相遇

@@ -52,6 +52,24 @@ public class Lc206 {
      recursively
      出口：head == null
      */
+    public ListNode reverseListT(ListNode head) {
+        return reverse(head,null);
+    }
+
+    public ListNode reverseT(ListNode head,ListNode newHead){
+        if(head == null){
+            return newHead;
+        }
+
+        //1 null
+        // head.next 1-> null
+        ListNode next = head.next;
+        head.next = newHead;
+        newHead = head;
+        return reverse(next,newHead);
+    }
+
+
     public ListNode reverseList2(ListNode head) {
         return reverse(head,null);
     }
