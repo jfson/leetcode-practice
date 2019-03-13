@@ -1,16 +1,12 @@
 package com.sun.leetcode;
 
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.sun.leetcode.company.Microsoft.Lc794;
+import com.sun.leetcode.company.Ms.Lc794;
 import com.sun.leetcode.differentkind.array.EasyLc717;
 import com.sun.leetcode.differentkind.greed.LcMedium767;
-
-import java.util.logging.Logger;
 
 public class MainActivity extends AppCompatActivity {
 
