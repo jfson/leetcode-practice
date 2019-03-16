@@ -1,6 +1,10 @@
 package com.sun.leetcode.company.Ms;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+
 import java.util.HashMap;
+import java.util.Objects;
 
 /**
  * Author: jfson sun
@@ -47,6 +51,7 @@ public class Lc290 {
         put(b,2)  -> 1; put(cat,2) -> 1；都为 1
         put(a,3)  -> 0; put(cat,3) -> 0；都为 0
      */
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public boolean wordPattern(String pattern, String str) {
         if(pattern.isEmpty() || str.isEmpty()) return false;
 
@@ -55,7 +60,10 @@ public class Lc290 {
 
         HashMap<Object,Integer> map = new HashMap<>();
         for(int i = 0;i<words.length;i++){
-            if(map.put(pattern.charAt(i),i)!=(map.put(words[i],i))){
+//            if(map.put(pattern.charAt(i),i)!=(map.put(words[i],i))){
+              // 用!= 有问题
+            if (!Objects.equals(map.put(pattern.charAt(i), i),
+                    map.put(words[i], i))){
                 return false;
             }
         }
