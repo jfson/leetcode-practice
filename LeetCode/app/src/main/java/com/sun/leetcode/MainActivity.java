@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.sun.leetcode.company.Ms.Lc692;
 import com.sun.leetcode.company.Ms.Lc794;
+import com.sun.leetcode.company.Ms.Lc917;
 import com.sun.leetcode.differentkind.array.EasyLc717;
 import com.sun.leetcode.differentkind.greed.LcMedium767;
 
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
 //        String[] st = {"OXX","XOX","OXO"};
 //        new Lc794().validTicTacToe(st);
 
-        List<String> list = new Lc692().topKFrequent(new String[]{"i", "love", "leetcode", "i", "love", "coding"}, 2);
+//        List<String> list = new Lc692().topKFrequent(new String[]{"i", "love", "leetcode", "i", "love", "coding"}, 2);
+
+        new Lc917().reverseOnlyLetters("ab-cd");
     }
 }
