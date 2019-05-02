@@ -1,21 +1,8 @@
 package com.sun.leetcode.company.snap;
 
+import com.sun.leetcode.model.RandomListNode;
+
 import java.util.HashMap;
-
-/**
- * Author: jfson sun
- * Create on:  2018/12/16
- * Question:
- * Description:
- * Train of thought:
- */
-
-
-class RandomListNode {
-    int label;
-    RandomListNode next, random;
-    RandomListNode(int x) { this.label = x; }
-}
 
 public class Lc138 {
 
