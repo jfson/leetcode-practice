@@ -28,7 +28,7 @@ public class Lc339 {
      Output: 27
      Explanation: One 1 at depth 1, one 4 at depth 2, and one 6 at depth 3; 1 + 4*2 + 6*3 = 27.
      题意：返回所有元素的和。并且根据深度进行加权计算。num 乘其 深度
-     solution:
+     solution: 递归来解。或者用stack 辅助一下
      */
 
     public int depthSum(List<NestedInteger> nestedList) {

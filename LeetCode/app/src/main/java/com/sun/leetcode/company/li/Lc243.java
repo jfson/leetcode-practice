@@ -25,7 +25,7 @@ public class Lc243 {
      You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.
 
      题意：找到两个单词最近的距离
-     solution：
+     solution：每次都算一下min ，比较即可
      */
 
     public int shortestDistance(String[] words, String word1, String word2) {
