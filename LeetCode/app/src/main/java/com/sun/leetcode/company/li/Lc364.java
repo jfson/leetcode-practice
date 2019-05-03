@@ -34,7 +34,7 @@ public class Lc364 {
      * Input: [1,[4,[6]]]
      * Output: 17
      * Explanation: One 1 at depth 3, one 4 at depth 2, and one 6 at depth 1; 1*3 + 4*2 + 6*1 = 17.
-     * 题意：先进行深度计算。都用递归进行操作
+     * 题意：先进行深度计算
      * solution：dfs
      */
 
