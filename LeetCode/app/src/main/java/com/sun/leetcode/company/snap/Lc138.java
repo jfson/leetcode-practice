@@ -1,6 +1,5 @@
 package com.sun.leetcode.company.snap;
 
-import com.sun.leetcode.model.RandomListNode;
 
 import java.util.HashMap;
 
@@ -24,29 +23,29 @@ public class Lc138 {
      */
 
 
-    public RandomListNode copyRandomList(RandomListNode head) {
-
-        return null;
-    }
-
-    public RandomListNode copyRandomList2(RandomListNode head) {
-        if (head == null) return null;
-        HashMap<RandomListNode,RandomListNode> map = new HashMap<>();
-        RandomListNode node = head;
-        while (node != null){
-            map.put(node,new RandomListNode(node.label));
-            node = node.next;
-        }
-        node = head;
-
-        while (node!=null){
-            map.get(node).next = map.get(node.next);
-            map.get(node).random = map.get(node.random);
-            node = node.next;
-        }
-
-        return map.get(head);
-    }
+//    public RandomListNode copyRandomList(RandomListNode head) {
+//
+//        return null;
+//    }
+//
+//    public RandomListNode copyRandomList2(RandomListNode head) {
+//        if (head == null) return null;
+//        HashMap<RandomListNode,RandomListNode> map = new HashMap<>();
+//        RandomListNode node = head;
+//        while (node != null){
+//            map.put(node,new RandomListNode(node.label));
+//            node = node.next;
+//        }
+//        node = head;
+//
+//        while (node!=null){
+//            map.get(node).next = map.get(node.next);
+//            map.get(node).random = map.get(node.random);
+//            node = node.next;
+//        }
+//
+//        return map.get(head);
+//    }
 
 
 }

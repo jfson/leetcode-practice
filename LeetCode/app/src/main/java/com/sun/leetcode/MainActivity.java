@@ -41,5 +41,67 @@ public class MainActivity extends AppCompatActivity {
 //        List<String> list = new Lc692().topKFrequent(new String[]{"i", "love", "leetcode", "i", "love", "coding"}, 2);
 
         new Lc917().reverseOnlyLetters("ab-cd");
+
+        int[] tests = new int[]{11,2,34,6,75,33,3,23,21,18,11,9,0,19,37};
+//        quickSort(tests,0,tests.length-1);
+        insertSort(tests);
+        Log.d("--","");
+    }
+
+    public void insertSort(int[] nums) {
+        // 1,2,4,5, --- 3
+        for (int i = 1; i < nums.length-1; i++) {
+            int j = i - 1;
+            int temp = nums[i];
+            for (; j >= 0 && nums[j] > temp; j--) {
+                nums[j + 1] = nums[j];
+            }
+            nums[j + 1] = temp;
+        }
+    }
+
+
+    public void bubbleSort(int[] nums){
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i+1; j < nums.length; j++) {
+                if (nums[i] < nums[j]){
+                    int temp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = temp;
+                }
+            }
+        }
+    }
+
+    public void quickSort(int[] nums,int l,int r){
+        if (l > r) return;
+
+        int i  = l;
+        int j  = r;
+        int temp = nums[l];
+
+        while(i != j){
+            while(nums[j] >= temp && i < j){
+                j--;
+            }
+
+            while(nums[i] <= temp && i < j){
+                i++;
+            }
+
+            if(i < j){
+                int t = nums[i];
+                nums[i] = nums[j];
+                nums[j] = t;
+            }
+        }
+
+        //i = j
+        nums[l] = nums[i];
+        nums[i] = temp;
+
+
+        quickSort(nums,l,i-1);
+        quickSort(nums,i+1,r);
     }
 }
