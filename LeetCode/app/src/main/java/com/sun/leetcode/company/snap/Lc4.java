@@ -9,5 +9,16 @@ package com.sun.leetcode.company.snap;
  */
 public class Lc4 {
 
+    public void test(){
+//        Test ttt = new Test();
+//        String a= "";
+//        a.substring()
+    }
 
+    class Test{
+
+        public Test(){
+
+        }
+    }
 }
