@@ -7,7 +7,7 @@ package com.sun.leetcode.differentkind.array;
  * Description:
  * Train of thought:
  */
-public class Medium73 {
+public class MediumLc73 {
     /**
      73. Set Matrix Zeroes
 

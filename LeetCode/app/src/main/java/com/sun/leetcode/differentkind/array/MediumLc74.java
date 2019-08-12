@@ -7,7 +7,7 @@ package com.sun.leetcode.differentkind.array;
  * Description:
  * Train of thought:
  */
-public class LcMediun74 {
+public class MediumLc74 {
     /**
      * 74. Search a 2D Matrix
      * DescriptionHintsSubmissionsDiscussSolution
