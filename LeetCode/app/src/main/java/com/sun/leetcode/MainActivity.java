@@ -3,11 +3,13 @@ package com.sun.leetcode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.LinearLayout;
 
 import com.sun.leetcode.company.Ms.FindNum;
 import com.sun.leetcode.company.Ms.Lc692;
 import com.sun.leetcode.company.Ms.Lc794;
 import com.sun.leetcode.company.Ms.Lc917;
+import com.sun.leetcode.company.bytedance.ThreadDemo;
 import com.sun.leetcode.differentkind.array.EasyLc717;
 import com.sun.leetcode.differentkind.greed.LcMedium767;
 
@@ -21,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         FindNum.print();
+
+        new ThreadDemo().startDemo();
+    }
+
+    public static String s = "";
+
+    public void hh(){
+        s = "ssss";
     }
 
     public void insertSort(int[] nums) {
@@ -78,5 +88,40 @@ public class MainActivity extends AppCompatActivity {
 
         quickSort(nums,l,i-1);
         quickSort(nums,i+1,r);
+
+
+        LinearLayout lll = new LinearLayout(this);
+        lll.getChildCount();
+    }
+
+    public void  qs(int[] nums,int l,int r){
+        if(l > r){
+            return;
+        }
+
+        int i = l;
+        int j = r;
+        int temp = nums[l];
+        while (i != j){
+            while (nums[j] >= temp && i < j){
+                j--;
+            }
+
+            while (nums[i] <= temp && i < j){
+                i++;
+            }
+
+            if (i < j){
+                int t = nums[i];
+                nums[i] = nums[j];
+                nums[j] = t;
+            }
+        }
+
+        nums[l] = nums[i];
+        nums[i] = temp;
+
+        quickSort(nums,l, i-1);
+        quickSort(nums,i+1, j);
     }
 }
