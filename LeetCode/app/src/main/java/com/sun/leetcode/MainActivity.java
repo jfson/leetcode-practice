@@ -1,8 +1,11 @@
 package com.sun.leetcode;
 
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.LruCache;
 import android.widget.LinearLayout;
 
 import com.sun.leetcode.company.Ms.FindNum;
@@ -25,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
         FindNum.print();
 
         new ThreadDemo().startDemo();
+
+        Handler hh = new Handler(){
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+            }
+        };
+
+        LruCache
     }
 
     public static String s = "";
@@ -124,4 +136,92 @@ public class MainActivity extends AppCompatActivity {
         quickSort(nums,l, i-1);
         quickSort(nums,i+1, j);
     }
+
+
+
+
+
+
+
+
+
+
+    public void quicks(int[] nums,int left,int right){
+        if(left > right){
+            return;
+        }
+
+        int temp = nums[left];
+        int i = left;
+        int j = right;
+
+
+        while (i != j){
+            while(nums[j] >= temp && i < j){
+                j--;
+            }
+
+            while (nums[i] <= temp && i < j){
+                i++;
+            }
+
+            if (i != j){
+                int num = nums[i];
+                nums[i] = nums[j];
+                nums[j] = num;
+            }
+        }
+
+        nums[left] = nums[i];
+        nums[i] = temp;
+        quickSort(nums,left,i-1);
+        quickSort(nums,i+1,right);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

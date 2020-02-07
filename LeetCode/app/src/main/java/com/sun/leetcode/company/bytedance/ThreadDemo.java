@@ -1,6 +1,5 @@
 package com.sun.leetcode.company.bytedance;
 
-import android.util.Log;
 
 /**
  * Author: jfson sun
@@ -12,7 +11,7 @@ import android.util.Log;
 public class ThreadDemo {
     public static final String TAG = ThreadDemo.class.getSimpleName();
     static Boolean isOne = true;
-    static Object o = new Object();
+    static Object o = new Object(); //锁不能变
     static String[] one = {"o1", "o2", "o3", "o4", "o5", "o6"};
     static String[] two = {"t1", "t2", "t3", "t4", "t5", "t6"};
 
