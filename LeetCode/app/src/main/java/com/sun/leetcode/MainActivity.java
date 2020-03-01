@@ -7,14 +7,17 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.LruCache;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.sun.leetcode.company.Ms.FindNum;
 import com.sun.leetcode.company.Ms.Lc692;
 import com.sun.leetcode.company.Ms.Lc794;
 import com.sun.leetcode.company.Ms.Lc917;
+import com.sun.leetcode.company.bytedance.PrintArray;
 import com.sun.leetcode.company.bytedance.ThreadDemo;
 import com.sun.leetcode.differentkind.array.EasyLc717;
 import com.sun.leetcode.differentkind.greed.LcMedium767;
+import com.sun.leetcode.difficulty.medium.LeetCode54;
 
 import java.util.List;
 
@@ -25,29 +28,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FindNum.print();
 
-        new ThreadDemo().startDemo();
+        int[][] res = new int[4][4];
+        res[0] = new int[]{1, 2, 3,     4};
+        res[1] = new int[]{12, 13, 14, 5};
+        res[2] = new int[]{11, 16, 15, 6};
+        res[3] = new int[]{10, 9, 8,    7};
+//        PrintArray.printArray(res,getBaseContext());
 
-        Handler hh = new Handler(){
-            @Override
-            public void handleMessage(Message msg) {
-                super.handleMessage(msg);
-            }
-        };
+        int[] rrr = {1,3,5,3,1,3,6,80,4,68,77,22,44,65,14,1,56,1516,16,11};
+        quicks(rrr,0,rrr.length-1);
+        String string = "h";
+        for (int i : rrr) {
+            string +=i+",";
+        }
 
-        LruCache
+        Toast.makeText(this,string,Toast.LENGTH_LONG).show();
+        Log.d("suzzhen",string);
+
+
     }
 
     public static String s = "";
 
-    public void hh(){
+    public void hh() {
         s = "ssss";
     }
 
     public void insertSort(int[] nums) {
         // 1,2,4,5, --- 3
-        for (int i = 1; i < nums.length-1; i++) {
+        for (int i = 1; i < nums.length - 1; i++) {
             int j = i - 1;
             int temp = nums[i];
             for (; j >= 0 && nums[j] > temp; j--) {
@@ -58,10 +68,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void bubbleSort(int[] nums){
+    public void bubbleSort(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i+1; j < nums.length; j++) {
-                if (nums[i] < nums[j]){
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] < nums[j]) {
                     int temp = nums[i];
                     nums[i] = nums[j];
                     nums[j] = temp;
@@ -70,23 +80,23 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void quickSort(int[] nums,int l,int r){
+    public void quickSort(int[] nums, int l, int r) {
         if (l > r) return;
 
-        int i  = l;
-        int j  = r;
+        int i = l;
+        int j = r;
         int temp = nums[l];
 
-        while(i != j){
-            while(nums[j] >= temp && i < j){
+        while (i != j) {
+            while (nums[j] >= temp && i < j) {
                 j--;
             }
 
-            while(nums[i] <= temp && i < j){
+            while (nums[i] <= temp && i < j) {
                 i++;
             }
 
-            if(i < j){
+            if (i < j) {
                 int t = nums[i];
                 nums[i] = nums[j];
                 nums[j] = t;
@@ -98,32 +108,32 @@ public class MainActivity extends AppCompatActivity {
         nums[i] = temp;
 
 
-        quickSort(nums,l,i-1);
-        quickSort(nums,i+1,r);
+        quickSort(nums, l, i - 1);
+        quickSort(nums, i + 1, r);
 
 
         LinearLayout lll = new LinearLayout(this);
         lll.getChildCount();
     }
 
-    public void  qs(int[] nums,int l,int r){
-        if(l > r){
+    public void qs(int[] nums, int l, int r) {
+        if (l > r) {
             return;
         }
 
         int i = l;
         int j = r;
         int temp = nums[l];
-        while (i != j){
-            while (nums[j] >= temp && i < j){
+        while (i != j) {
+            while (nums[j] >= temp && i < j) {
                 j--;
             }
 
-            while (nums[i] <= temp && i < j){
+            while (nums[i] <= temp && i < j) {
                 i++;
             }
 
-            if (i < j){
+            if (i < j) {
                 int t = nums[i];
                 nums[i] = nums[j];
                 nums[j] = t;
@@ -133,88 +143,42 @@ public class MainActivity extends AppCompatActivity {
         nums[l] = nums[i];
         nums[i] = temp;
 
-        quickSort(nums,l, i-1);
-        quickSort(nums,i+1, j);
+        quickSort(nums, l, i - 1);
+        quickSort(nums, i + 1, j);
     }
 
 
-
-
-
-
-
-
-
-
-    public void quicks(int[] nums,int left,int right){
+    public void quicks(int[] nums, int left, int right) {
         if(left > right){
             return;
         }
 
         int temp = nums[left];
-        int i = left;
-        int j = right;
+        int l = left;
+        int r = right;
 
-
-        while (i != j){
-            while(nums[j] >= temp && i < j){
-                j--;
+        while (l != r){
+            while (nums[r] >= temp && l < r){
+                r--;
+            }
+            while (nums[l] <= temp && l < r){
+                l++;
             }
 
-            while (nums[i] <= temp && i < j){
-                i++;
-            }
-
-            if (i != j){
-                int num = nums[i];
-                nums[i] = nums[j];
-                nums[j] = num;
+            if (l < r){
+                int swap = nums[l];
+                nums[l] = nums[r];
+                nums[r] = swap;
             }
         }
 
-        nums[left] = nums[i];
-        nums[i] = temp;
-        quickSort(nums,left,i-1);
-        quickSort(nums,i+1,right);
+        nums[left] = nums[l];
+        nums[l] = temp;
+
+        quicks(nums,left,l-1);
+        quicks(nums,l+1,right);
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

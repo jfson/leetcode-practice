@@ -1,5 +1,8 @@
 package com.sun.leetcode.difficulty.medium;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +14,7 @@ import java.util.List;
  * Train of thought:  转圈取值
  */
 public class LeetCode54 {
-    public List<Integer> spiralOrder(int[][] matrix) {
+    public List<Integer> spiralOrder(int[][] matrix, Context context) {
         List<Integer> res = new ArrayList<>();
 
         if (matrix == null || matrix.length == 0) return res;
@@ -63,6 +66,11 @@ public class LeetCode54 {
             n = n - 2;
         }
 
+        String ss = "";
+        for (Integer re : res) {
+            ss += re + ",";
+            Toast.makeText(context,ss,Toast.LENGTH_LONG).show();
+        }
         return res;
     }
 
