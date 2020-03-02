@@ -13,6 +13,7 @@ import com.sun.leetcode.company.Ms.FindNum;
 import com.sun.leetcode.company.Ms.Lc692;
 import com.sun.leetcode.company.Ms.Lc794;
 import com.sun.leetcode.company.Ms.Lc917;
+import com.sun.leetcode.company.bytedance.BigNumber;
 import com.sun.leetcode.company.bytedance.PrintArray;
 import com.sun.leetcode.company.bytedance.ThreadDemo;
 import com.sun.leetcode.differentkind.array.EasyLc717;
@@ -28,23 +29,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//
+//        int[][] res = new int[4][4];
+//        res[0] = new int[]{1, 2, 3,     4};
+//        res[1] = new int[]{12, 13, 14, 5};
+//        res[2] = new int[]{11, 16, 15, 6};
+//        res[3] = new int[]{10, 9, 8,    7};
+////        PrintArray.printArray(res,getBaseContext());
+//
+//        int[] rrr = {1,3,5,3,1,3,6,80,4,68,77,22,44,65,14,1,56,1516,16,11};
+//        quicks(rrr,0,rrr.length-1);
+//        String string = "h";
+//        for (int i : rrr) {
+//            string +=i+",";
+//        }
+//
+//        Toast.makeText(this,string,Toast.LENGTH_LONG).show();
 
-        int[][] res = new int[4][4];
-        res[0] = new int[]{1, 2, 3,     4};
-        res[1] = new int[]{12, 13, 14, 5};
-        res[2] = new int[]{11, 16, 15, 6};
-        res[3] = new int[]{10, 9, 8,    7};
-//        PrintArray.printArray(res,getBaseContext());
 
-        int[] rrr = {1,3,5,3,1,3,6,80,4,68,77,22,44,65,14,1,56,1516,16,11};
-        quicks(rrr,0,rrr.length-1);
-        String string = "h";
-        for (int i : rrr) {
-            string +=i+",";
-        }
+        String s = BigNumber.bigNumber("123", "234");
+        Log.d("suzzhen",s);
 
-        Toast.makeText(this,string,Toast.LENGTH_LONG).show();
-        Log.d("suzzhen",string);
 
 
     }
