@@ -37,14 +37,14 @@ public class MainActivity extends AppCompatActivity {
 //        res[3] = new int[]{10, 9, 8,    7};
 ////        PrintArray.printArray(res,getBaseContext());
 //
-//        int[] rrr = {1,3,5,3,1,3,6,80,4,68,77,22,44,65,14,1,56,1516,16,11};
-//        quicks(rrr,0,rrr.length-1);
-//        String string = "h";
-//        for (int i : rrr) {
-//            string +=i+",";
-//        }
-//
-//        Toast.makeText(this,string,Toast.LENGTH_LONG).show();
+        int[] rrr = {1,3,5,3,1,3,6,80,4,68,77,22,44,65,14,1,56,1516,16,11};
+        quicks(rrr,0,rrr.length-1);
+        String string = "h";
+        for (int i : rrr) {
+            string +=i+",";
+        }
+
+        Toast.makeText(this,string,Toast.LENGTH_LONG).show();
 
 
         String s = BigNumber.bigNumber("123", "234");
@@ -117,8 +117,8 @@ public class MainActivity extends AppCompatActivity {
         quickSort(nums, i + 1, r);
 
 
-        LinearLayout lll = new LinearLayout(this);
-        lll.getChildCount();
+//        LinearLayout lll = new LinearLayout(this);
+//        lll.getChildCount();
     }
 
     public void qs(int[] nums, int l, int r) {
@@ -153,8 +153,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void quicks(int[] nums, int left, int right) {
-        if(left > right){
+    public static void quicks(int[] nums, int left, int right) {
+        if (left > right){
             return;
         }
 
@@ -166,20 +166,21 @@ public class MainActivity extends AppCompatActivity {
             while (nums[r] >= temp && l < r){
                 r--;
             }
+
             while (nums[l] <= temp && l < r){
                 l++;
             }
 
             if (l < r){
-                int swap = nums[l];
+                int cur = nums[l];
                 nums[l] = nums[r];
-                nums[r] = swap;
+                nums[r] = cur;
             }
         }
 
+
         nums[left] = nums[l];
         nums[l] = temp;
-
         quicks(nums,left,l-1);
         quicks(nums,l+1,right);
 
