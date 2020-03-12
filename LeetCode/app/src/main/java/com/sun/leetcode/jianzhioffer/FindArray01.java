@@ -7,7 +7,7 @@ package com.sun.leetcode.jianzhioffer;
  * Description:
  * Train of thought:
  */
-public class FindArray {
+public class FindArray01 {
     /**
      * 在一个二维数组中（每个一维数组的长度相同），
      * 每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
