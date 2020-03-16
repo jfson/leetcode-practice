@@ -8,7 +8,7 @@ package com.sun.leetcode.model;
  * Train of thought:
  */
 public class ListNode {
-    public int val;
+    public int val;//当前节点  值
     public ListNode next;
 
     public ListNode(int x) {
