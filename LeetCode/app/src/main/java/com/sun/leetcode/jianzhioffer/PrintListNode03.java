@@ -19,6 +19,33 @@ public class PrintListNode03 {
      * 递归的概念
      */
 
+
+
+    public ArrayList<Integer> printListFromTailToHead2(ListNode listNode) {
+        ArrayList<Integer> list = new ArrayList<>();
+        helper(list,listNode);
+
+        Collections.reverse(list);
+        return list;
+    }
+
+    // (0,next-> 1)
+    // (1,next-> 2)
+    // (2,next-> 3)
+    // (3,next-> null)
+    // 0-1-2-3-null
+    public void helper(ArrayList<Integer> ret,ListNode node){
+        if (node == null){
+            return;
+        }
+        //0 ,1,2,3,
+        ret.add(node.val);
+        helper(ret,node.next);
+    }
+
+
+
+
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         // (0,next-> 1)
         // (1,next-> 2)
